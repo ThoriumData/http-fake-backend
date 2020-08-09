@@ -48,7 +48,7 @@ lab.beforeEach((done) => {
             return done(err);
         }
 
-        done();
+        //done();
     });
 });
 
@@ -73,7 +73,7 @@ lab.experiment('Custom response header', () => {
             value: 'Bearer eyJhbGciOiJIUzUxMiJ9'
         });
 
-        done();
+        //done();
     });
 
     lab.test('should have a fallback if not defined in .env file', (done) => {
@@ -84,7 +84,7 @@ lab.experiment('Custom response header', () => {
             value: 'https://hapijs.com'
         });
 
-        done();
+        //done();
     });
 
     lab.test('regular responses should have the defined response header', (done) => {
@@ -98,7 +98,7 @@ lab.experiment('Custom response header', () => {
 
             Code.expect(response.headers['x-powered-by']).to.equal('https://hapijs.com');
 
-            done();
+            //done();
         });
     });
 
@@ -113,11 +113,11 @@ lab.experiment('Custom response header', () => {
 
             Code.expect(response.headers['x-powered-by']).to.equal('https://hapijs.com');
 
-            done();
+            //done();
         });
     });
 
-    lab.test('boom errors should have the defined response header', (done) => {
+    lab.test('boom errors should have the defined response header', () => {
 
         request = {
             method: 'GET',
@@ -128,11 +128,11 @@ lab.experiment('Custom response header', () => {
 
             Code.expect(response.headers['x-powered-by']).to.equal('https://hapijs.com');
 
-            done();
+            //done();
         });
     });
 
-    lab.test('unallowed methods of regular responses should have the defined response header', (done) => {
+    lab.test('unallowed methods of regular responses should have the defined response header', () => {
 
         request = {
             method: 'POST',
@@ -143,11 +143,11 @@ lab.experiment('Custom response header', () => {
 
             Code.expect(response.headers['x-powered-by']).to.equal('https://hapijs.com');
 
-            done();
+            //done();
         });
     });
 
-    lab.test('unallowed methods of boom errors should have the defined response header', (done) => {
+    lab.test('unallowed methods of boom errors should have the defined response header', () => {
 
         request = {
             method: 'POST',
@@ -158,7 +158,7 @@ lab.experiment('Custom response header', () => {
 
             Code.expect(response.headers['x-powered-by']).to.equal('https://hapijs.com');
 
-            done();
+            //done();
         });
     });
 

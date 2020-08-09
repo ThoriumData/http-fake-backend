@@ -77,7 +77,7 @@ lab.beforeEach((done) => {
             return done(err);
         }
 
-        done();
+        //done();
     });
 });
 
@@ -85,9 +85,7 @@ lab.beforeEach((done) => {
 lab.experiment('Setup endpoints', () => {
 
     lab.beforeEach((done) => {
-
-
-        done();
+        //done();
     });
 
 
@@ -102,7 +100,7 @@ lab.experiment('Setup endpoints', () => {
 
             Code.expect(response.statusCode).to.equal(404);
 
-            done();
+            //done();
         });
     });
 
@@ -122,7 +120,7 @@ lab.experiment('Setup endpoints', () => {
                 message: 'Method Not Allowed'
             });
 
-            done();
+            //done();
         });
     });
 
@@ -138,7 +136,7 @@ lab.experiment('Setup endpoints', () => {
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(JSON.parse(response.result)).to.equal({ response: '🐷' });
 
-            done();
+            //done();
         });
     });
 
@@ -154,7 +152,7 @@ lab.experiment('Setup endpoints', () => {
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(response.result).to.equal({ javascript: 'object' });
 
-            done();
+            //done();
         });
     });
 
@@ -170,7 +168,7 @@ lab.experiment('Setup endpoints', () => {
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(JSON.parse(response.result)).to.equal({ response: '🐷' });
 
-            done();
+            //done();
         });
     });
 
@@ -186,7 +184,7 @@ lab.experiment('Setup endpoints', () => {
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(JSON.parse(response.result)).to.equal({ response: '🐷' });
 
-            done();
+            //done();
         });
     });
 
@@ -202,7 +200,7 @@ lab.experiment('Setup endpoints', () => {
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(response.result).to.equal({ success: true });
 
-            done();
+            //done();
         });
     });
 
@@ -218,7 +216,7 @@ lab.experiment('Setup endpoints', () => {
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(JSON.parse(response.result)).to.equal({ response: '🐷' });
 
-            done();
+            //done();
         });
     });
 
@@ -260,7 +258,7 @@ lab.experiment('Setup endpoints', () => {
                 message: 'Method Not Allowed'
             });
 
-            done();
+            //done();
         });
 
 
